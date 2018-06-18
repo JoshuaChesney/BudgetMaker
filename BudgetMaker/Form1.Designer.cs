@@ -31,8 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAppTitle = new System.Windows.Forms.Label();
-            this.lblExpenses = new System.Windows.Forms.Label();
-            this.lblIncome = new System.Windows.Forms.Label();
+            this.lblUserReport = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.signInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signInToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,23 +63,15 @@
             this.lblAppTitle.TabIndex = 1;
             this.lblAppTitle.Text = "Budget Master 2018";
             // 
-            // lblExpenses
+            // lblUserReport
             // 
-            this.lblExpenses.AutoSize = true;
-            this.lblExpenses.Location = new System.Drawing.Point(19, 167);
-            this.lblExpenses.Name = "lblExpenses";
-            this.lblExpenses.Size = new System.Drawing.Size(102, 13);
-            this.lblExpenses.TabIndex = 2;
-            this.lblExpenses.Text = "Average Expenses: ";
-            // 
-            // lblIncome
-            // 
-            this.lblIncome.AutoSize = true;
-            this.lblIncome.Location = new System.Drawing.Point(19, 131);
-            this.lblIncome.Name = "lblIncome";
-            this.lblIncome.Size = new System.Drawing.Size(88, 13);
-            this.lblIncome.TabIndex = 3;
-            this.lblIncome.Text = "Average Income:";
+            this.lblUserReport.AutoSize = true;
+            this.lblUserReport.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserReport.Location = new System.Drawing.Point(19, 131);
+            this.lblUserReport.Name = "lblUserReport";
+            this.lblUserReport.Size = new System.Drawing.Size(114, 23);
+            this.lblUserReport.TabIndex = 3;
+            this.lblUserReport.Text = "SAMPLE TEXT";
             // 
             // menuStrip1
             // 
@@ -107,12 +98,14 @@
             this.signInToolStripMenuItem1.Name = "signInToolStripMenuItem1";
             this.signInToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.signInToolStripMenuItem1.Text = "Sign In";
+            this.signInToolStripMenuItem1.Click += new System.EventHandler(this.signInToolStripMenuItem1_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
             this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // financeToolStripMenuItem
             // 
@@ -126,7 +119,7 @@
             // addIncomeToolStripMenuItem
             // 
             this.addIncomeToolStripMenuItem.Name = "addIncomeToolStripMenuItem";
-            this.addIncomeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addIncomeToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.addIncomeToolStripMenuItem.Text = "Add income";
             this.addIncomeToolStripMenuItem.Click += new System.EventHandler(this.addIncomeToolStripMenuItem_Click);
             // 
@@ -135,20 +128,21 @@
             this.addExpenseToolStripMenuItem.Name = "addExpenseToolStripMenuItem";
             this.addExpenseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addExpenseToolStripMenuItem.Text = "Add expense";
+            this.addExpenseToolStripMenuItem.Click += new System.EventHandler(this.addExpenseToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 970);
-            this.Controls.Add(this.lblIncome);
-            this.Controls.Add(this.lblExpenses);
+            this.Controls.Add(this.lblUserReport);
             this.Controls.Add(this.lblAppTitle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "Budget Master";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -161,8 +155,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblAppTitle;
-        private System.Windows.Forms.Label lblExpenses;
-        private System.Windows.Forms.Label lblIncome;
+        private System.Windows.Forms.Label lblUserReport;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem1;
