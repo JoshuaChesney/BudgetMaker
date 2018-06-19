@@ -1,17 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace BudgetMaker
 {
-    class User
+    public class User
     {
-        struct revenue //a revenue object is an income or expense with a label attached to it
+        public class revenue //a revenue object is an income or expense with a label attached to it
         {
-            public double amount; // positive for income, negative for expense
-            public string label; // labels are purely for users and do not need to adhere to a standard
+            public double amount { get; set; } // positive for income, negative for expense
+            public string label { get; set; } // labels are purely for users and do not need to adhere to a standard
         }
         List<revenue> incomes = new List<revenue>();
         List<revenue> expenses = new List<revenue>();
+
+        public void writeToFile(string fileName)
+        {
+            using (FileStream stream = new FileStream(fileName, FileMode.Create))
+            {
+                XmlSerializer xml = new XmlSerializer(typeof(revenue),);
+
+                for (int count = 0; count < incomes.Count; count++)
+                {
+                    xml.Serialize(stream, this.incomes[count]);
+                }
+
+            }
+        }
 
         public void addIncome(double amt, string lbl)
         {
@@ -55,7 +71,7 @@ namespace BudgetMaker
             return averageExpenses / count;
         }
 
-        public void print()
+        public void print() //we don't have a console so this will need to be adapted
         {
             foreach (var income in incomes)
             {

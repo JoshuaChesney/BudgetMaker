@@ -42,5 +42,14 @@ namespace BudgetMaker
         {
             Session currentSession = new Session();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            User Josh = new User();
+            Josh.addIncome(10.0, "Bitcoin Sales");
+            Josh.addIncome(300.0, "Paycheck");
+            Josh.addExpense(80.0, "Bills");
+            Josh.writeToFile("JoshData.xml");
+        }
     }
 }

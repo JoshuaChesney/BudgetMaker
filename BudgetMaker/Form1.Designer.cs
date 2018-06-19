@@ -39,6 +39,7 @@
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addIncomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addExpenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -96,14 +97,14 @@
             // signInToolStripMenuItem1
             // 
             this.signInToolStripMenuItem1.Name = "signInToolStripMenuItem1";
-            this.signInToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.signInToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
             this.signInToolStripMenuItem1.Text = "Sign In";
             this.signInToolStripMenuItem1.Click += new System.EventHandler(this.signInToolStripMenuItem1_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -126,15 +127,26 @@
             // addExpenseToolStripMenuItem
             // 
             this.addExpenseToolStripMenuItem.Name = "addExpenseToolStripMenuItem";
-            this.addExpenseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addExpenseToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.addExpenseToolStripMenuItem.Text = "Add expense";
             this.addExpenseToolStripMenuItem.Click += new System.EventHandler(this.addExpenseToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(67, 303);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 86);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "btnXMLTEST";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 970);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblUserReport);
             this.Controls.Add(this.lblAppTitle);
             this.Controls.Add(this.pictureBox1);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addIncomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addExpenseToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 
