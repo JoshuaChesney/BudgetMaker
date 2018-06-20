@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace BudgetMaker
 {
-    public partial class frmSignIn : Form
+    public partial class frmCreateUser : Form
     {
-        public frmSignIn()
+        public frmCreateUser()
         {
             InitializeComponent();
         }
 
-        private void btnSignIn_Click(object sender, EventArgs e)
+        private void btnCreateUser_Click(object sender, EventArgs e)
         {
-            string createUserText = txtSignIn.Text.ToString();
+            string createUserText = txtCreateUser.Text.ToString();
             frmMain.currentSession.createUser(createUserText);
             this.Close();
         }

@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace BudgetMaker
 {
-    class Session
+    public class Session
     {
         private User currentUser = new User();
-        private string currentUserName;
-        public void loadUser()
+
+        public void loadUser(string userToLoad)
         {
-            currentUserName = 
+            currentUser.username = userToLoad;
+            currentUser.openFile();
+        }
+
+        //load user and create user currently do the same thing
+        //this may change in the future, so I am going to leave them seperated for now
+
+        public void createUser(string userToCreate)
+        {
+            currentUser.username = userToCreate;
+            currentUser.openFile();
         }
     }
 }

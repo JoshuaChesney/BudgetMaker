@@ -39,8 +39,8 @@
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addIncomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addExpenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.createAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -49,7 +49,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1072, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1072, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(363, 238);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,7 +91,8 @@
             // 
             this.signInToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSignIn,
-            this.mnuSignOut});
+            this.mnuSignOut,
+            this.createAccountToolStripMenuItem});
             this.signInToolStripMenuItem.Name = "signInToolStripMenuItem";
             this.signInToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.signInToolStripMenuItem.Text = "Users";
@@ -99,14 +100,14 @@
             // mnuSignIn
             // 
             this.mnuSignIn.Name = "mnuSignIn";
-            this.mnuSignIn.Size = new System.Drawing.Size(180, 22);
+            this.mnuSignIn.Size = new System.Drawing.Size(120, 22);
             this.mnuSignIn.Text = "Sign In";
             this.mnuSignIn.Click += new System.EventHandler(this.signInToolStripMenuItem1_Click);
             // 
             // mnuSignOut
             // 
             this.mnuSignOut.Name = "mnuSignOut";
-            this.mnuSignOut.Size = new System.Drawing.Size(180, 22);
+            this.mnuSignOut.Size = new System.Drawing.Size(120, 22);
             this.mnuSignOut.Text = "Sign Out";
             this.mnuSignOut.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -133,27 +134,23 @@
             this.addExpenseToolStripMenuItem.Text = "Add expense";
             this.addExpenseToolStripMenuItem.Click += new System.EventHandler(this.addExpenseToolStripMenuItem_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(67, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 86);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "btnXMLTEST";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // createAccountToolStripMenuItem
+            // 
+            this.createAccountToolStripMenuItem.Name = "createAccountToolStripMenuItem";
+            this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createAccountToolStripMenuItem.Text = "Create Account";
+            this.createAccountToolStripMenuItem.Click += new System.EventHandler(this.createAccountToolStripMenuItem_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 970);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblUserReport);
             this.Controls.Add(this.lblAppTitle);
             this.Controls.Add(this.pictureBox1);
@@ -183,8 +180,8 @@
         private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addIncomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addExpenseToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.ToolStripMenuItem createAccountToolStripMenuItem;
     }
 }
 

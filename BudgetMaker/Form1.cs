@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace BudgetMaker
 {
+
     public partial class frmMain : Form
     {
+        public static Session currentSession = new Session();
+
         public frmMain()
         {
             InitializeComponent();
         }
-
-        Session currentSession = new Session();
-
 
         private void addIncomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -33,8 +33,7 @@ namespace BudgetMaker
 
         private void signInToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
-            currentSession.loadUser();
+            
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +48,13 @@ namespace BudgetMaker
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void createAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCreateUser createUserPopUpBox = new frmCreateUser();
+            createUserPopUpBox.ShowDialog();
         }
     }
 }

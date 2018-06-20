@@ -1,6 +1,6 @@
 ﻿namespace BudgetMaker
 {
-    partial class frmSignIn
+    partial class frmCreateUser
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtCreateUser = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.txtSignIn = new System.Windows.Forms.TextBox();
-            this.btnSignIn = new System.Windows.Forms.Button();
+            this.btnCreateUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // txtCreateUser
+            // 
+            this.txtCreateUser.Location = new System.Drawing.Point(227, 111);
+            this.txtCreateUser.Name = "txtCreateUser";
+            this.txtCreateUser.Size = new System.Drawing.Size(142, 20);
+            this.txtCreateUser.TabIndex = 3;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(96, 104);
+            this.lblUsername.Location = new System.Drawing.Point(99, 106);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(122, 25);
-            this.lblUsername.TabIndex = 0;
+            this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Username: ";
             // 
-            // txtSignIn
+            // btnCreateUser
             // 
-            this.txtSignIn.Location = new System.Drawing.Point(224, 109);
-            this.txtSignIn.Name = "txtSignIn";
-            this.txtSignIn.Size = new System.Drawing.Size(142, 20);
-            this.txtSignIn.TabIndex = 1;
+            this.btnCreateUser.Location = new System.Drawing.Point(227, 138);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(142, 23);
+            this.btnCreateUser.TabIndex = 4;
+            this.btnCreateUser.Text = "Create User";
+            this.btnCreateUser.UseVisualStyleBackColor = true;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
-            // btnSignIn
-            // 
-            this.btnSignIn.Location = new System.Drawing.Point(224, 135);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.Size = new System.Drawing.Size(142, 23);
-            this.btnSignIn.TabIndex = 2;
-            this.btnSignIn.Text = "Sign In";
-            this.btnSignIn.UseVisualStyleBackColor = true;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // frmSignIn
+            // frmCreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 261);
-            this.Controls.Add(this.btnSignIn);
-            this.Controls.Add(this.txtSignIn);
+            this.Controls.Add(this.btnCreateUser);
+            this.Controls.Add(this.txtCreateUser);
             this.Controls.Add(this.lblUsername);
-            this.Name = "frmSignIn";
-            this.Text = "SignIn";
+            this.Name = "frmCreateUser";
+            this.Text = "CreateUser";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,8 +77,8 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox txtCreateUser;
         private System.Windows.Forms.Label lblUsername;
-        private System.Windows.Forms.TextBox txtSignIn;
-        private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.Button btnCreateUser;
     }
 }
