@@ -34,14 +34,16 @@
             this.lblUserReport = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.signInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signInToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSignIn = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSignOut = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addIncomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addExpenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -88,25 +90,25 @@
             // signInToolStripMenuItem
             // 
             this.signInToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.signInToolStripMenuItem1,
-            this.signOutToolStripMenuItem});
+            this.mnuSignIn,
+            this.mnuSignOut});
             this.signInToolStripMenuItem.Name = "signInToolStripMenuItem";
             this.signInToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.signInToolStripMenuItem.Text = "Users";
             // 
-            // signInToolStripMenuItem1
+            // mnuSignIn
             // 
-            this.signInToolStripMenuItem1.Name = "signInToolStripMenuItem1";
-            this.signInToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
-            this.signInToolStripMenuItem1.Text = "Sign In";
-            this.signInToolStripMenuItem1.Click += new System.EventHandler(this.signInToolStripMenuItem1_Click);
+            this.mnuSignIn.Name = "mnuSignIn";
+            this.mnuSignIn.Size = new System.Drawing.Size(180, 22);
+            this.mnuSignIn.Text = "Sign In";
+            this.mnuSignIn.Click += new System.EventHandler(this.signInToolStripMenuItem1_Click);
             // 
-            // signOutToolStripMenuItem
+            // mnuSignOut
             // 
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.signOutToolStripMenuItem.Text = "Sign Out";
-            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
+            this.mnuSignOut.Name = "mnuSignOut";
+            this.mnuSignOut.Size = new System.Drawing.Size(180, 22);
+            this.mnuSignOut.Text = "Sign Out";
+            this.mnuSignOut.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // financeToolStripMenuItem
             // 
@@ -141,6 +143,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +165,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,12 +178,13 @@
         private System.Windows.Forms.Label lblUserReport;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem signInToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuSignIn;
+        private System.Windows.Forms.ToolStripMenuItem mnuSignOut;
         private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addIncomeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addExpenseToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
     }
 }
 

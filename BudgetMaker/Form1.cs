@@ -18,6 +18,9 @@ namespace BudgetMaker
             InitializeComponent();
         }
 
+        Session currentSession = new Session();
+
+
         private void addIncomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -31,6 +34,7 @@ namespace BudgetMaker
         private void signInToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+            currentSession.loadUser();
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,16 +44,12 @@ namespace BudgetMaker
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Session currentSession = new Session();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User Josh = new User();
-            Josh.addIncome(10.0, "Bitcoin Sales");
-            Josh.addIncome(300.0, "Paycheck");
-            Josh.addExpense(80.0, "Bills");
-            Josh.writeToFile("JoshData.xml");
+            
         }
     }
 }

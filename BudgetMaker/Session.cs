@@ -8,11 +8,11 @@ namespace BudgetMaker
 {
     class Session
     {
-        private User currentUser;
-
+        private User currentUser = new User();
+        private string currentUserName;
         public void loadUser()
         {
-
+            currentUserName = 
         }
     }
 }
