@@ -7,7 +7,10 @@ namespace BudgetMaker
 {
     public class User
     {
-        public User() { }
+        public User()
+        {
+            
+        }
 
         public class revenue //a revenue object is an income or expense with a label attached to it
         {
@@ -89,23 +92,24 @@ namespace BudgetMaker
             return averageExpenses / count;
         }
 
-        public void print() //we don't have a console so this will need to be adapted
+        public string buildUserReport()
         {
+            string userReport = "";
             foreach (var income in incomes)
             {
-                Console.WriteLine(income.label + ": $" + income.amount + "\n");
+                userReport += (income.label + ": $" + income.amount + "\n");
             }
 
-            Console.WriteLine("$" + calculateAverageIncome() + "\n");
+            userReport += ("$" + calculateAverageIncome() + "\n");
 
             foreach (var expense in expenses)
             {
-                Console.WriteLine(expense.label + ": $" + expense.amount + "\n");
+                userReport += (expense.label + ": $" + expense.amount + "\n");
             }
 
-            Console.WriteLine("$" + calculateAverageExpenses() + "\n");
+            userReport += ("$" + calculateAverageExpenses() + "\n");
 
-
+            return userReport;
         }
 
     }

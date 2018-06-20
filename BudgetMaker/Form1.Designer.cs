@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblAppTitle = new System.Windows.Forms.Label();
@@ -36,11 +37,11 @@
             this.signInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSignIn = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSignOut = new System.Windows.Forms.ToolStripMenuItem();
-            this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addIncomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addExpenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.createAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.addRevenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tmrRefreshInformation = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -100,44 +101,16 @@
             // mnuSignIn
             // 
             this.mnuSignIn.Name = "mnuSignIn";
-            this.mnuSignIn.Size = new System.Drawing.Size(120, 22);
+            this.mnuSignIn.Size = new System.Drawing.Size(180, 22);
             this.mnuSignIn.Text = "Sign In";
             this.mnuSignIn.Click += new System.EventHandler(this.signInToolStripMenuItem1_Click);
             // 
             // mnuSignOut
             // 
             this.mnuSignOut.Name = "mnuSignOut";
-            this.mnuSignOut.Size = new System.Drawing.Size(120, 22);
+            this.mnuSignOut.Size = new System.Drawing.Size(180, 22);
             this.mnuSignOut.Text = "Sign Out";
             this.mnuSignOut.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
-            // 
-            // financeToolStripMenuItem
-            // 
-            this.financeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addIncomeToolStripMenuItem,
-            this.addExpenseToolStripMenuItem});
-            this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
-            this.financeToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.financeToolStripMenuItem.Text = "Finance";
-            // 
-            // addIncomeToolStripMenuItem
-            // 
-            this.addIncomeToolStripMenuItem.Name = "addIncomeToolStripMenuItem";
-            this.addIncomeToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.addIncomeToolStripMenuItem.Text = "Add income";
-            this.addIncomeToolStripMenuItem.Click += new System.EventHandler(this.addIncomeToolStripMenuItem_Click);
-            // 
-            // addExpenseToolStripMenuItem
-            // 
-            this.addExpenseToolStripMenuItem.Name = "addExpenseToolStripMenuItem";
-            this.addExpenseToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.addExpenseToolStripMenuItem.Text = "Add expense";
-            this.addExpenseToolStripMenuItem.Click += new System.EventHandler(this.addExpenseToolStripMenuItem_Click);
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // createAccountToolStripMenuItem
             // 
@@ -145,6 +118,31 @@
             this.createAccountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createAccountToolStripMenuItem.Text = "Create Account";
             this.createAccountToolStripMenuItem.Click += new System.EventHandler(this.createAccountToolStripMenuItem_Click);
+            // 
+            // financeToolStripMenuItem
+            // 
+            this.financeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addRevenueToolStripMenuItem});
+            this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
+            this.financeToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.financeToolStripMenuItem.Text = "Finance";
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // addRevenueToolStripMenuItem
+            // 
+            this.addRevenueToolStripMenuItem.Name = "addRevenueToolStripMenuItem";
+            this.addRevenueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addRevenueToolStripMenuItem.Text = "Add Revenue";
+            this.addRevenueToolStripMenuItem.Click += new System.EventHandler(this.addRevenueToolStripMenuItem_Click);
+            // 
+            // tmrRefreshInformation
+            // 
+            this.tmrRefreshInformation.Enabled = true;
+            this.tmrRefreshInformation.Tick += new System.EventHandler(this.tmrRefreshInformation_Tick);
             // 
             // frmMain
             // 
@@ -178,10 +176,10 @@
         private System.Windows.Forms.ToolStripMenuItem mnuSignIn;
         private System.Windows.Forms.ToolStripMenuItem mnuSignOut;
         private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addIncomeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addExpenseToolStripMenuItem;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.ToolStripMenuItem createAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addRevenueToolStripMenuItem;
+        private System.Windows.Forms.Timer tmrRefreshInformation;
     }
 }
 

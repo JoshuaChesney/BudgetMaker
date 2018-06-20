@@ -20,7 +20,8 @@ namespace BudgetMaker
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             string createUserText = txtSignIn.Text.ToString();
-            frmMain.currentSession.createUser(createUserText);
+            frmMain.currentSession.loadUser(createUserText);
+            frmMain.userIsSignedIn = true;
             this.Close();
         }
     }

@@ -15,6 +15,7 @@ namespace BudgetMaker
     public partial class frmMain : Form
     {
         public static Session currentSession = new Session();
+        public static bool userIsSignedIn = false;
 
         public frmMain()
         {
@@ -33,7 +34,8 @@ namespace BudgetMaker
 
         private void signInToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            frmSignIn signInPopUpBox = new frmSignIn();
+            signInPopUpBox.ShowDialog();
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,6 +57,20 @@ namespace BudgetMaker
         {
             frmCreateUser createUserPopUpBox = new frmCreateUser();
             createUserPopUpBox.ShowDialog();
+        }
+
+        private void addRevenueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddRevenue addRevenuePopUpBox = new frmAddRevenue();
+            addRevenuePopUpBox.ShowDialog();
+        }
+
+        private void tmrRefreshInformation_Tick(object sender, EventArgs e)
+        {
+            if (userIsSignedIn)
+            {
+                lblUserReport.Text = currentSession.currentUser.buildUserReport();
+            }
         }
     }
 }
